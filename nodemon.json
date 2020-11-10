@@ -1,5 +1,5 @@
 {
     "watch": ["src"],
     "ext": "ts",
-    "exec": "ts-node ./processor-service/processor-service.ts --ignoreCatch"
+    "exec": "ts-node src/processor-service/processor-service.ts --ignoreCatch"
   }
