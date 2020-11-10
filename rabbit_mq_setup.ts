@@ -3,8 +3,8 @@ require('dotenv').config();
 import amqp from 'amqplib';
 
 // RabbitMQ connection string
-// const messageQueueConnectionString = process.env.AMQP_SERVER+'';
-const messageQueueConnectionString = `amqp://${process.env.AMQP_USER}:${encodeURIComponent(process.env.AMQP_PASS)}@${process.env.AMQP_HOST}`;
+const messageQueueConnectionString = process.env.AMQP_SERVER;
+// const messageQueueConnectionString = `amqp://${process.env.AMQP_USER}:${encodeURIComponent(process.env.AMQP_PASS)}@${process.env.AMQP_HOST}`;
 
 async function setup() {
   console.log("Setting up RabbitMQ Exchanges/Queues");
