@@ -12,8 +12,8 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded());
 
 // RabbitMQ connection string
-// const messageQueueConnectionString = `amqp://${process.env.AMQP_USER}:${encodeURIComponent(process.env.AMQP_PASS)}@${process.env.AMQP_HOST}`;
-const messageQueueConnectionString = process.env.AMQP_SERVER+'';
+const messageQueueConnectionString = `amqp://${process.env.AMQP_USER}:${encodeURIComponent(process.env.AMQP_PASS)}@${process.env.AMQP_HOST}`;
+// const messageQueueConnectionString = process.env.AMQP_SERVER+'';
 async function listenForMessages() {
   // connect to Rabbit MQ
   let connection = await amqp.connect(messageQueueConnectionString);
